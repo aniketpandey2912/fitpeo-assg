@@ -16,7 +16,16 @@ const Main = () => {
         <LeftBoard />
         {/* <L2 /> */}
       </Flex>
-      <Flex border="1px solid blue" bg="red.200" h="100vh" w="80%">
+      <Flex
+        border="1px solid blue"
+        bgGradient={[
+          "linear(to-tr, teal.300, yellow.400)",
+          "linear(to-t, blue.200, teal.500)",
+          "linear(to-b, orange.100, purple.300)",
+        ]}
+        h="100vh"
+        w="80%"
+      >
         <RightBoard />
       </Flex>
     </Flex>

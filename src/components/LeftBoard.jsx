@@ -1,48 +1,56 @@
 import React from "react";
 import { Flex, Text, Icon, Heading, Box, Avatar } from "@chakra-ui/react";
-import { GrSettingsOption } from "react-icons/gr";
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
+import {
+  AddIcon,
+  CalendarIcon,
+  CopyIcon,
+  EmailIcon,
+  QuestionOutlineIcon,
+  SettingsIcon,
+  UnlockIcon,
+} from "@chakra-ui/icons";
 
 const items = [
   {
     id: 1,
     text: "Dashboard",
-    icon: GrSettingsOption,
+    icon: UnlockIcon,
     hasArrow: false,
     isActive: true,
   },
   {
     id: 2,
     text: "Product",
-    icon: GrSettingsOption,
+    icon: CalendarIcon,
     hasArrow: true,
     isActive: false,
   },
   {
     id: 3,
     text: "Customers",
-    icon: GrSettingsOption,
+    icon: EmailIcon,
     hasArrow: true,
     isActive: false,
   },
   {
     id: 4,
     text: "Income",
-    icon: GrSettingsOption,
+    icon: CopyIcon,
     hasArrow: true,
     isActive: false,
   },
   {
     id: 5,
     text: "Promote",
-    icon: GrSettingsOption,
+    icon: AddIcon,
     hasArrow: true,
     isActive: false,
   },
   {
     id: 6,
     text: "Help",
-    icon: GrSettingsOption,
+    icon: QuestionOutlineIcon,
     hasArrow: true,
     isActive: false,
   },
@@ -54,9 +62,10 @@ const user = {
   lastName: "Pandey",
   role: "Project Manager",
 };
+
 const LeftBoard = () => {
   return (
-    // Contianer
+    // Container
     <Flex w="100%" direction="column" color="white">
       {/* Container - Menus */}
       <Flex
@@ -68,10 +77,10 @@ const LeftBoard = () => {
         mt="10%"
       >
         <Flex alignItems="center" w="auto">
-          <Icon as={GrSettingsOption} boxSize="1.5em" ml="5%" />
+          <Icon as={SettingsIcon} boxSize="1.5em" ml="5%" />
           <Box w="80%">
             <Heading size="md" ml="5%">
-              DASHBOARD
+              Dashboard
             </Heading>
           </Box>
         </Flex>
