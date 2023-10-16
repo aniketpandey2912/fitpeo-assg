@@ -1,5 +1,7 @@
 import { Flex, Select, Text } from "@chakra-ui/react";
 import React from "react";
+import RechartBarChart from "../charts/BarChart";
+import RechartsPieChart from "../charts/PieChart";
 
 const ChartAnalytics = () => {
   return (
@@ -45,8 +47,10 @@ const ChartAnalytics = () => {
           </Flex>
         </Flex>
 
-        {/* Chart */}
-        <Flex border="1px solid red" h="90%"></Flex>
+        {/* Bar Chart */}
+        <Flex border="1px solid red" h="90%">
+          <RechartBarChart />
+        </Flex>
       </Flex>
 
       {/* Right */}
@@ -54,25 +58,27 @@ const ChartAnalytics = () => {
         w="30%"
         border="1px solid black"
         borderRadius="10px"
-        justifyContent="space-between"
         // align="center"
+        direction="column"
       >
-        <Flex gap="10px">
-          <Text
-            bgGradient="linear(to-l, #7928CA, #FF0080)"
-            bgClip="text"
-            fontSize="lg"
-            fontWeight="bold"
-          >
-            Overview
-          </Text>
+        {/* Ribbon */}
+        <Flex alignItems="center">
+          <Flex direction="column" gap="0">
+            <Text
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgClip="text"
+              fontSize="lg"
+              fontWeight="bold"
+            >
+              Customers
+            </Text>
+            <Text fontSize="xs">Customers that buy products</Text>
+          </Flex>
         </Flex>
-        <Flex>
-          <Select placeholder="Select option" border="none">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </Select>
+
+        {/* Pie Chart */}
+        <Flex border="2px solid red" h="90%">
+          <RechartsPieChart />
         </Flex>
       </Flex>
     </Flex>

@@ -10,8 +10,9 @@ const Main = () => {
       <Flex
         border="1px solid red"
         bgGradient="linear(to-b, #7928CA, #FF0080)"
-        h="100vh"
+        minH="100vh"
         w="20%"
+        // h="100%"
       >
         <LeftBoard />
         {/* <L2 /> */}
@@ -23,7 +24,7 @@ const Main = () => {
           "linear(to-t, blue.200, teal.500)",
           "linear(to-b, orange.100, purple.300)",
         ]}
-        h="100vh"
+        // h="100vh"
         w="80%"
       >
         <RightBoard />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import NameAndSearch from "./rightBoard/NameAndSearch";
 import NumberAnalytics from "./rightBoard/NumberAnalytics";
 import ChartAnalytics from "./rightBoard/ChartAnalytics";
