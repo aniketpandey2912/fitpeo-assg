@@ -1,8 +1,6 @@
 <h1 align="center" id="title">Fitpeo-dashboard</h1>
 
-<!-- <p align="center"><img src="https://res.cloudinary.com/dqsqpy5cl/image/upload/v1692354194/fitpeo_logo.png" alt="project-image" width="150" height="150/"></p> -->
-
-<p>This is a clone of an e-commerce website Pantaloons replicating some of the features and functionalities of original website.</p>
+<p>A static and responsive dashboard layout using react.</p>
 
 ### Solo Project
 
@@ -14,7 +12,12 @@
 
 <h2>Highlights of website</h2>
 
-<img src="https://github.com/aniketpandey2912/pantaloons-clone/blob/main/public/1.png?raw=true" alt="project-screenshot" width="500" height="250/">
+<p>Large Screen View</p>
+<img src="https://github.com/aniketpandey2912/fitpeo-assg/blob/master/public/1.png?raw=true" alt="project-screenshot" width="500" height="250/">
+<p>Mobile View</p>
+<img src="https://github.com/aniketpandey2912/fitpeo-assg/blob/master/public/3.png?raw=true" alt="project-screenshot" width="500" height="250/">
+<p>Mobile View Drawer</p>
+<img src="https://github.com/aniketpandey2912/fitpeo-assg/blob/master/public/4.png?raw=true" alt="project-screenshot" width="500" height="250/">
 
 <h2>🛠️ Installation Steps:</h2>
 
