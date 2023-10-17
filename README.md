@@ -15,9 +15,9 @@
 <p>Large Screen View</p>
 <img src="https://github.com/aniketpandey2912/fitpeo-assg/blob/master/public/1.png?raw=true" alt="project-screenshot" width="500" height="250/">
 <p>Mobile View</p>
-<img src="https://github.com/aniketpandey2912/fitpeo-assg/blob/master/public/3.png?raw=true" alt="project-screenshot" width="500" height="250/">
+<img src="https://github.com/aniketpandey2912/fitpeo-assg/blob/master/public/3.png?raw=true" alt="project-screenshot" width="250" height="500/">
 <p>Mobile View Drawer</p>
-<img src="https://github.com/aniketpandey2912/fitpeo-assg/blob/master/public/4.png?raw=true" alt="project-screenshot" width="500" height="250/">
+<img src="https://github.com/aniketpandey2912/fitpeo-assg/blob/master/public/4.png?raw=true" alt="project-screenshot" width="250" height="500/">
 
 <h2>🛠️ Installation Steps:</h2>
 
