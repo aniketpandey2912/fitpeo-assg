@@ -6,13 +6,12 @@ import RightBoard from "./RightBoard";
 
 const Main = () => {
   return (
-    <Flex border="1px solid black" h="100vh">
+    <Flex border="1px solid black" h="auto">
       <Flex
         border="1px solid red"
         bgGradient="linear(to-b, #7928CA, #FF0080)"
         minH="100vh"
         w="20%"
-        // h="100%"
       >
         <LeftBoard />
         {/* <L2 /> */}
@@ -24,7 +23,7 @@ const Main = () => {
           "linear(to-t, blue.200, teal.500)",
           "linear(to-b, orange.100, purple.300)",
         ]}
-        // h="100vh"
+        minH="100vh"
         w="80%"
       >
         <RightBoard />

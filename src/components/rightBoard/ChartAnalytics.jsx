@@ -6,7 +6,7 @@ import RechartsPieChart from "../charts/PieChart";
 const ChartAnalytics = () => {
   return (
     <Flex
-      //   border="1px solid black"
+      border="1px solid black"
       borderRadius="10px"
       h="50%"
       gap="3%"
@@ -15,7 +15,7 @@ const ChartAnalytics = () => {
       {/* Left */}
       <Flex
         w="70%"
-        border="1px solid black"
+        border="0px solid black"
         borderRadius="10px"
         direction="column"
       >
@@ -48,7 +48,7 @@ const ChartAnalytics = () => {
         </Flex>
 
         {/* Bar Chart */}
-        <Flex border="1px solid red" h="90%">
+        <Flex border="0px solid red" h="90%">
           <RechartBarChart />
         </Flex>
       </Flex>
@@ -56,7 +56,7 @@ const ChartAnalytics = () => {
       {/* Right */}
       <Flex
         w="30%"
-        border="1px solid black"
+        border="0px solid black"
         borderRadius="10px"
         // align="center"
         direction="column"
@@ -77,7 +77,7 @@ const ChartAnalytics = () => {
         </Flex>
 
         {/* Pie Chart */}
-        <Flex border="2px solid red" h="90%">
+        <Flex border="0px solid red" h="90%">
           <RechartsPieChart />
         </Flex>
       </Flex>
