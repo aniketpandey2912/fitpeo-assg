@@ -11,7 +11,7 @@ import {
   UnlockIcon,
 } from "@chakra-ui/icons";
 
-const items = [
+export const items = [
   {
     id: 1,
     text: "Dashboard",
@@ -56,7 +56,7 @@ const items = [
   },
 ];
 
-const user = {
+export const user = {
   avatar: "https://avatars.githubusercontent.com/u/107461782?v=4",
   firstName: "Aniket",
   lastName: "Pandey",
@@ -71,12 +71,12 @@ const LeftBoard = () => {
       <Flex
         direction="column"
         w="100%"
-        h="80%"
+        h="75%"
         gap="5%"
-        paddingInline="5%"
-        mt="10%"
+        p="5%"
+        mt={{ base: "5%", md: "10%" }}
       >
-        <Flex alignItems="center" w="auto">
+        <Flex alignItems="center">
           <Icon as={SettingsIcon} boxSize="1.5em" ml="5%" />
           <Box w="80%">
             <Heading size="md" ml="5%">
@@ -102,7 +102,7 @@ const LeftBoard = () => {
       </Flex>
 
       {/* Container - User */}
-      <Flex w="100%" paddingInline="5%">
+      <Flex p="5%">
         <Flex
           w="100%"
           align="center"
@@ -114,14 +114,14 @@ const LeftBoard = () => {
           <Box>
             <Avatar
               name={`${user?.firstName ?? ""} ${user?.lastName ?? ""}`}
-              src="https://bit.ly/dan-abramov"
+              src={user.avatar}
             />
           </Box>
           <Box w="60%" ml="5%" fontSize="14px">
-            <Text fontWeight="500" color="">{`${
-              user?.firstName ?? "NA"
-            }`}</Text>
-            <Text fontStyle="italic">{`${user?.role ?? "NA"}`}</Text>
+            <Text fontWeight="500" color="">
+              {user?.firstName ?? "NA"}
+            </Text>
+            <Text fontStyle="italic">{user?.role ?? "NA"}</Text>
           </Box>
           <Icon as={MdKeyboardArrowDown} w="20%" />
         </Flex>

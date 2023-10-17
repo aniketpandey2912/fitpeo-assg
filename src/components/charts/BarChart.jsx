@@ -3,10 +3,8 @@ import {
   BarChart,
   Bar,
   XAxis,
-  //   YAxis,
   Tooltip,
-  //   Legend,
-  CartesianGrid,
+  // CartesianGrid,
   Cell,
   ResponsiveContainer,
 } from "recharts";
@@ -30,11 +28,9 @@ function RechartBarChart() {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={data}>
-        <CartesianGrid stroke="#f5f5f5" />
-        <XAxis dataKey="month" stroke="red" />
-        {/* <YAxis /> */}
+        {/* <CartesianGrid /> */}
+        <XAxis dataKey="month" stroke="black" />
         <Tooltip />
-        {/* <Legend /> */}
         <Bar dataKey="sales">
           {data.map((entry, index) => (
             <Cell key={`cell-${entry.month}`} fill={`${entry.color}`} />

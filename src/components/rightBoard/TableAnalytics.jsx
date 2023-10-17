@@ -12,27 +12,27 @@ import TableDetails from "../table/Table";
 
 const TableAnalytics = () => {
   return (
-    <Flex border="1px solid black" h="100%" direction="column" gap="2%">
+    <Flex
+      // overflowY="auto" // Add a vertical scrollbar when content overflows
+      direction="column"
+      border="0px solid black"
+      bg="whiteAlpha.400"
+      borderRadius="10px"
+      p="1%"
+    >
       {/* Ribbon */}
-      <Flex
-        border="0px solid black"
-        w="100%"
-        h="20%"
-        justifyContent="space-between"
-      >
-        <Flex gap="10px">
-          <Text
-            bgGradient="linear(to-l, #7928CA, #FF0080)"
-            bgClip="text"
-            fontSize="lg"
-            fontWeight="bold"
-          >
-            Product Sell
-          </Text>
-        </Flex>
-        <Flex gap="2%">
+      <Flex justifyContent="space-between" alignItems="center" mb="1%">
+        <Text
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgClip="text"
+          fontSize="lg"
+          fontWeight="semibold"
+        >
+          Product Sell
+        </Text>
+        <Flex alignItems="center">
           {/* Search */}
-          <InputGroup bgColor="whiteAlpha.500" size="xs">
+          <InputGroup size="xs" w={{ base: "60%", md: "100%" }}>
             <InputLeftElement pointerEvents="none">
               <Search2Icon color="gray.500" />
             </InputLeftElement>
@@ -40,7 +40,12 @@ const TableAnalytics = () => {
           </InputGroup>
 
           {/* Select */}
-          <Select placeholder="Select option" border="none" size="xs">
+          <Select
+            placeholder="Select option"
+            border="none"
+            size="xs"
+            ml={{ base: "0", md: "2%" }}
+          >
             <option value="option1" selected>
               Last 30 days
             </option>
@@ -51,9 +56,7 @@ const TableAnalytics = () => {
       </Flex>
 
       {/* Table */}
-      <Flex border="0px solid black" w="100%">
-        <TableDetails />
-      </Flex>
+      <TableDetails />
     </Flex>
   );
 };

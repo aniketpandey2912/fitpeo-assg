@@ -33,7 +33,6 @@ const TableDetails = () => {
   return (
     <TableContainer width="100%">
       <Table variant="simple">
-        {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
         <Thead>
           <Tr>
             <Th>Product Name</Th>

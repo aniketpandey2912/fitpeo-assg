@@ -7,7 +7,15 @@ import TableAnalytics from "./rightBoard/TableAnalytics";
 
 const RightBoard = () => {
   return (
-    <Flex w="100%" h="100%" gap="2%" direction="column" p="2%">
+    <Flex
+      border="1px solid blue"
+      w="100%"
+      h="100%"
+      gap="2%"
+      direction="column"
+      p="1%"
+      overflowY="auto"
+    >
       <NameAndSearch />
       <NumberAnalytics />
       <ChartAnalytics />

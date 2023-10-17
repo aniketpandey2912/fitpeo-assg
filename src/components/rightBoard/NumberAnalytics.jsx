@@ -1,5 +1,5 @@
 import { ArrowDownIcon, ArrowUpIcon } from "@chakra-ui/icons";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 
 const numberAnalytics = [
@@ -43,21 +43,33 @@ const numberAnalytics = [
 
 const NumberAnalytics = () => {
   return (
-    <Flex border="1px solid black" h="20%" justifyContent="space-between">
+    <SimpleGrid
+      columns={{ base: 2, sm: 4 }}
+      spacingX="10"
+      spacingY="5"
+      border="0px solid black"
+      h="20%"
+      justifyContent="space-between"
+      fontSize={{ base: "12px", md: "md" }}
+    >
       {numberAnalytics?.map((el) => (
         <Flex
           key={el.id}
-          //   border="1px solid red"
-          w="23%"
+          border="0px solid red"
+          w="100%"
           alignItems="center"
           justifyContent="center"
           gap="10px"
-          bgColor="white"
-          boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+          bg="whiteAlpha.400"
           borderRadius="10px"
+          p="1%"
         >
           <Box>
-            <Image src={el.img} alt={el.heading} h="100px" />
+            <Image
+              src={el.img}
+              alt={el.heading}
+              h={{ base: "50px", md: "100px" }}
+            />
           </Box>
           <Box>
             <Text>{el.heading}</Text>
@@ -72,7 +84,7 @@ const NumberAnalytics = () => {
           </Box>
         </Flex>
       ))}
-    </Flex>
+    </SimpleGrid>
   );
 };
 

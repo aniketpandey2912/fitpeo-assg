@@ -2,29 +2,23 @@ import React from "react";
 import { Flex } from "@chakra-ui/react";
 import LeftBoard from "./LeftBoard";
 import RightBoard from "./RightBoard";
-// import L2 from "./L2";
 
 const Main = () => {
   return (
-    <Flex border="1px solid black" h="auto">
+    <Flex border="0px solid black" h="auto" w="100%">
       <Flex
-        border="1px solid red"
+        display={{ base: "none", sm: "none", md: "flex" }}
+        border="0px solid yellow"
         bgGradient="linear(to-b, #7928CA, #FF0080)"
-        minH="100vh"
-        w="20%"
+        w={{ base: "40%", md: "20%" }}
       >
         <LeftBoard />
-        {/* <L2 /> */}
       </Flex>
       <Flex
-        border="1px solid blue"
-        bgGradient={[
-          "linear(to-tr, teal.300, yellow.400)",
-          "linear(to-t, blue.200, teal.500)",
-          "linear(to-b, orange.100, purple.300)",
-        ]}
+        border="0px solid blue"
+        bgGradient="linear(to-b, orange.100, purple.300)"
         minH="100vh"
-        w="80%"
+        w={{ base: "100%", md: "80%" }}
       >
         <RightBoard />
       </Flex>

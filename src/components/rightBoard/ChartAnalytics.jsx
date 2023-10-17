@@ -1,87 +1,93 @@
-import { Flex, Select, Text } from "@chakra-ui/react";
+import { Box, Flex, Select, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import RechartBarChart from "../charts/BarChart";
 import RechartsPieChart from "../charts/PieChart";
 
 const ChartAnalytics = () => {
   return (
-    <Flex
-      border="1px solid black"
-      borderRadius="10px"
-      h="50%"
-      gap="3%"
-      justifyContent="space-between"
+    <Box
+      overflowY={{ base: "auto", lg: "visible" }} // Add a vertical scrollbar when content overflows
     >
-      {/* Left */}
       <Flex
-        w="70%"
+        direction={{ base: "column", sm: "column", lg: "row" }}
         border="0px solid black"
-        borderRadius="10px"
-        direction="column"
+        // borderRadius="10px"
+        h={{ base: "90vh", sm: "90vh", lg: "50vh" }}
+        gap="2%"
+        justifyContent="space-between"
       >
-        {/* Ribbon */}
-        <Flex
-          border="0px solid black"
-          w="100%"
-          h="10%"
-          justifyContent="space-between"
+        {/* Left */}
+        <VStack
+          spacing="2%"
+          flex={{ base: 1, sm: "0.6", md: 0.7 }}
+          bg="whiteAlpha.400"
+          borderRadius="10px"
+          p="1%"
         >
-          <Flex gap="10px">
-            <Text
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
-              bgClip="text"
-              fontSize="lg"
-              fontWeight="bold"
-            >
-              Overview
-            </Text>
+          {/* Ribbon */}
+          <Flex
+            border="0px solid black"
+            w="100%"
+            h="10%"
+            justifyContent="space-between"
+          >
+            <Flex gap="10px">
+              <Text
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+                bgClip="text"
+                fontSize="lg"
+                fontWeight="semibold"
+              >
+                Overview
+              </Text>
+            </Flex>
+            <Flex>
+              <Select placeholder="Select option" size="xs">
+                <option value="option1">Monthly</option>
+                <option value="option2" selected>
+                  Quarterly
+                </option>
+                <option value="option3">Yearly</option>
+              </Select>
+            </Flex>
           </Flex>
-          <Flex>
-            <Select placeholder="Select option" border="none" size="xs">
-              <option value="option1">Monthly</option>
-              <option value="option2" selected>
-                Quarterly
-              </option>
-              <option value="option3">Yearly</option>
-            </Select>
+
+          {/* Bar Chart */}
+          <Flex w="100%" h="100%">
+            <RechartBarChart />
           </Flex>
-        </Flex>
+        </VStack>
 
-        {/* Bar Chart */}
-        <Flex border="0px solid red" h="90%">
-          <RechartBarChart />
-        </Flex>
-      </Flex>
-
-      {/* Right */}
-      <Flex
-        w="30%"
-        border="0px solid black"
-        borderRadius="10px"
-        // align="center"
-        direction="column"
-      >
-        {/* Ribbon */}
-        <Flex alignItems="center">
-          <Flex direction="column" gap="0">
-            <Text
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
-              bgClip="text"
-              fontSize="lg"
-              fontWeight="bold"
-            >
-              Customers
-            </Text>
-            <Text fontSize="xs">Customers that buy products</Text>
+        {/* Right */}
+        <Flex
+          direction={{ base: "column", md: "column", lg: "column" }}
+          flex={{ base: 1, sm: 1, lg: 0.3 }}
+          bg="whiteAlpha.400"
+          borderRadius="10px"
+          p="1%"
+        >
+          {/* Ribbon */}
+          <Flex alignItems="center">
+            <Flex direction="column" gap="0">
+              <Text
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+                bgClip="text"
+                fontSize="lg"
+                fontWeight="semibold"
+              >
+                Customers
+              </Text>
+              <Text fontSize="xs">Customers that buy products</Text>
+            </Flex>
           </Flex>
-        </Flex>
 
-        {/* Pie Chart */}
-        <Flex border="0px solid red" h="90%">
+          {/* Pie Chart */}
+          {/* <Flex w="100%" h="100%"> */}
           <RechartsPieChart />
+          {/* </Flex> */}
         </Flex>
       </Flex>
-    </Flex>
+    </Box>
   );
 };
 
